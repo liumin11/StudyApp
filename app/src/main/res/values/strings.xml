@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">文泰教育</string>
+    <string name="login_nm">请输入用户名/手机号</string>
+    <string name="login_pw">请输入密码</string>
+    <string name="item_js">教师：</string>
+    <string name="item_xs">学生：</string>
+    <string name="item_kc">课程：</string>
+    <string name="item_sc">时长：</string>
+    <string name="item_kssj">课程开始时间：</string>
+    <string name="item_jssj">课程结束时间：</string>
+    <string name="edit_fk">请输入反馈内容</string>
+    <string name="edit_fk_null">请输入内容</string>
+
+</resources>

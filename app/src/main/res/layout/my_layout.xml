@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <include layout="@layout/title_bar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/colortheme"
+
+        >
+
+        <ImageView
+            android:id="@+id/myimage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/txiconhs" />
+
+        <TextView
+            android:id="@+id/myxm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_toRightOf="@+id/myimage"
+
+            android:paddingLeft="30dp"
+            android:paddingTop="30dp"
+            android:text=""
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/mysjh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/myimage"
+            android:text=""
+            android:paddingTop="70dp"
+            android:paddingLeft="30dp"
+            android:textSize="20sp"
+            />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="意见反馈"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="#000"
+            />
+        <EditText
+            android:id="@+id/myfksr"
+            android:background="@drawable/bg_edittext"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:inputType="textMultiLine"
+            android:minLines="8"
+            android:maxLines="10"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:cursorVisible="true"
+            android:gravity="top"
+
+            android:hint="@string/edit_fk"
+            android:textCursorDrawable="@drawable/gb_edittext"
+            />
+
+
+        <Button
+            android:id="@+id/myfk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="提交反馈"
+
+            android:background="@color/colortheme"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>

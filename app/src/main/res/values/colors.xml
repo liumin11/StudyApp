@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#e16531</color>
+    <color name="colorPrimaryDark">#e16531</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colortheme">#e16531</color>
+    <color name="gray">#FFF0EFEF</color>
+    <color name="gray2">#FFDEDBDA</color>
+    <color name="teacher_gray">#dedbd8</color>
+    <color name="student_gray">#F5F5F5</color>
+    <color name="graytext">#686767</color>
+    <color name="white">#FFF</color>
+</resources>

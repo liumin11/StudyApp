@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="@drawable/bg_item_arc"
+    >
+
+
+<!--上部教师信息-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/itemshape"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:id="@+id/item_js"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/item_js"
+            android:textSize="20sp"
+
+            android:textColor="@color/graytext"/>
+
+        <TextView
+            android:id="@+id/item_jsxm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text=""
+            android:textSize="20sp"
+        />
+    </LinearLayout>
+
+<!--中部内容-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+<!--学生-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp">
+            <TextView
+                android:id="@+id/item_xs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/item_xs"
+                android:textSize="15sp"
+
+                />
+            <TextView
+                android:id="@+id/item_xsxm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text=""
+                />
+
+        </LinearLayout>
+
+<!--课程-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp">
+            <TextView
+                android:id="@+id/item_kc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/item_kc"
+                android:textSize="15sp"
+
+                />
+            <TextView
+                android:id="@+id/item_kcxm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text=""
+                />
+
+        </LinearLayout>
+<!--开始时间-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp">
+            <TextView
+                android:id="@+id/item_kssj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/item_kssj"
+                android:textSize="15sp"
+
+                />
+            <TextView
+                android:id="@+id/item_kssjd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text=""
+                />
+
+        </LinearLayout>
+<!--结束时间-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp">
+            <TextView
+                android:id="@+id/item_jssj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/item_jssj"
+                android:textSize="15sp"
+
+                />
+            <TextView
+                android:id="@+id/item_jssjd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text=""
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        >
+
+        <Button
+            android:id="@+id/have_class"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bt_kecshape"
+            android:drawableRight="@mipmap/bt_havaclass"
+            android:drawablePadding="-10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="18sp"
+            android:text="上课"/>
+
+        <!--<View android:layout_width="match_parent"-->
+            <!--android:layout_height="0.5dp"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:background="@android:color/background_dark"/>-->
+
+    </RelativeLayout>
+</LinearLayout>

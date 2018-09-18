@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--item的老师的背景色和分割线-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:left="-1dp" android:right="-1dp" android:top="-1dp">
+        <shape android:shape="rectangle">
+            <corners
+                android:topLeftRadius="25dp"
+                android:topRightRadius="25dp" />
+            <!--<solid android:color="@color/teacher_gray"/>-->
+            <gradient
+                android:angle="0"
+                android:startColor="#d2cfce"
+                android:centerColor="#e0dad6"
+                android:endColor="#efedeb"
+                android:type="linear" />
+            <stroke android:width="1dp" android:color="@color/graytext"/>
+        </shape>
+    </item>
+</layer-list>
