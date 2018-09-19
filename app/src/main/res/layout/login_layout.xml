@@ -12,7 +12,7 @@
         android:id="@+id/login_image"
         android:layout_width="144dp"
         android:layout_height="150dp"
-        android:src="@mipmap/ee"
+        android:src="@mipmap/ic_login"
         android:layout_gravity="center"
         />
     <TextView
@@ -37,7 +37,7 @@
             android:id="@+id/name_image"
             android:layout_width="55dp"
             android:layout_height="30dp"
-            app:srcCompat="@mipmap/loginnm"
+            app:srcCompat="@mipmap/ic_loginnm"
             />
 
         <EditText
@@ -65,7 +65,7 @@
             android:id="@+id/passw_image"
             android:layout_width="55dp"
             android:layout_height="30dp"
-            app:srcCompat="@mipmap/loginpw" />
+            app:srcCompat="@mipmap/ic_loginpw" />
 
         <EditText
             android:id="@+id/passwtext"
