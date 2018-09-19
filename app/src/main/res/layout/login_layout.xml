@@ -19,7 +19,7 @@
         android:id="@+id/login_tt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="文泰教育"
+        android:text="教育"
         android:layout_marginTop="0dp"
         android:textSize="26sp"
         android:gravity="center"
@@ -49,7 +49,7 @@
             android:layout_marginTop="55dp"
             android:layout_marginRight="30dp"
             android:hint="@string/login_nm"
-            android:text="13717849985"
+            android:inputType="number"
             android:theme="@style/myedit"
             />
     </LinearLayout>
@@ -76,7 +76,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="30dp"
             android:hint="@string/login_pw"
-            android:text="123456"
+            android:inputType="textPassword"
             android:theme="@style/myedit"
             />
     </LinearLayout>

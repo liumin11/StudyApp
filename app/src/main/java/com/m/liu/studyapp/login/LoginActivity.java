@@ -1,6 +1,9 @@
 package com.m.liu.studyapp.login;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.content.res.AssetManager;
 import android.graphics.Typeface;
 import android.os.Looper;
@@ -37,12 +40,12 @@ public class LoginActivity extends CommonActivity {
     public String userName;
     public String password;
     private long lastClickTime = 0;
+
     private  String url = "http://219.159.44.166:39003/hsApp/app/login.do?operate=login";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_layout);
-        Button login_button = (Button) findViewById(R.id.login_button);
 
         //给登陆文字设置字体
         TextView tt = (TextView) findViewById(R.id.login_tt);
@@ -50,6 +53,33 @@ public class LoginActivity extends CommonActivity {
         Typeface tf=Typeface.createFromAsset(mgr, "fonts/hwhp.ttf");//根据路径得到Typeface
         tt.setTypeface(tf);//设置字体
 
+        // 获取sharedpreferences对象
+        setTitle("Login");
+        SharedPreferences share = getSharedPreferences("Login",
+                Context.MODE_PRIVATE);
+//        userName = share.getString("userName", "");
+//        password = share.getString("password", "");
+
+        // 判断是否是之前有登录过
+        if (share == null) {
+            init();
+        } else {
+            // 判断是否刚注销
+            if (share.getBoolean("LoginBool", false)) {
+                // 跳转到注销页面并销毁当前activity
+                Intent intent = new Intent(LoginActivity.this,
+                        HomeActivity.class);
+                startActivity(intent);
+                finish();
+            } else {
+                init();
+            }
+        }
+    }
+
+
+    private void init(){
+        Button login_button = (Button) findViewById(R.id.login_button);
         //登陆按钮监听
         login_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +91,7 @@ public class LoginActivity extends CommonActivity {
                 login();
             }
         });
+
     }
 
     //本地对手机号做的限制
@@ -131,9 +162,24 @@ public class LoginActivity extends CommonActivity {
                             Toast.makeText(LoginActivity.this,json.message.toString(),Toast.LENGTH_SHORT).show();
                             Looper.loop();
                         }else if (json.success.toString().equals("true")){
+
+
+
+                            // 创建SharedPreferences对象用于储存帐号和密码,并将其私有化
+                            SharedPreferences share = getSharedPreferences("Login",
+                                    Context.MODE_PRIVATE);
+                            // 获取编辑器来存储数据到sharedpreferences中
+                            Editor editor = share.edit();
+                            editor.putString("userName", userName);
+                            editor.putString("password", password);
+                            editor.putString("data", json.data.nickName.toString());
+                            editor.putBoolean("LoginBool", true);
+                            // 将数据提交到sharedpreferences中
+                            editor.commit();
+
                             Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                            intent.putExtra("data", json.data.nickName.toString());
-                            intent.putExtra("userName",userName);
+//                            intent.putExtra("data", json.data.nickName.toString());
+//                            intent.putExtra("userName",userName);
                             startActivity(intent);
                             finish();
                         }

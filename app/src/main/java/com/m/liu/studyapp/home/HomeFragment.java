@@ -35,7 +35,7 @@ public class HomeFragment extends Fragment{
 
         View view = inflater.inflate(R.layout.home_listview, container, false);
         TextView title = view.findViewById(R.id.centerTv);
-        title.setText("文泰教育");
+        title.setText("教育");
         title_exit = view.findViewById(R.id.title_exit);
         title_exit.setVisibility(View.GONE);
         listView = view.findViewById(R.id.list_home);

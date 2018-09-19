@@ -5,6 +5,7 @@ import com.m.liu.studyapp.CommonActivity;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
+import android.view.MotionEvent;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
@@ -19,6 +20,7 @@ public class HomeActivity extends CommonActivity implements BottomNavigationBar.
     private HomeFragment homeFragment;
     private HaveClassFragment haveclassFragment;
     private MyFragment myFragment;
+    private long lastClickTime = 0;
 //    private CommonActivity titlelayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,5 +99,26 @@ public class HomeActivity extends CommonActivity implements BottomNavigationBar.
             mFragment = fragment;
         }
     }
+
+
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        if (ev.getAction() == MotionEvent.ACTION_DOWN) {
+            if (isFastDoubleClick()) {
+                return true;
+            }
+        }
+        return super.dispatchTouchEvent(ev);
+    }
+
+
+    public boolean isFastDoubleClick() {
+        long time = System.currentTimeMillis();
+        long timeD = time - lastClickTime;
+        lastClickTime = time;
+        return timeD <= 300;
+    }
+
 
 }
