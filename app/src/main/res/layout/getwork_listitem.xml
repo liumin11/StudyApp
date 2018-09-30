@@ -18,13 +18,21 @@
         android:layout_marginBottom="10dp"
         >
 
-        <TextView
+        <!--<TextView-->
+            <!--android:id="@+id/item_over_js"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/item_js"-->
+            <!--android:textSize="20sp"-->
+            <!--android:textColor="@color/graytext"/>-->
+
+
+        <ImageView
             android:id="@+id/item_over_js"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/item_js"
-            android:textSize="20sp"
-            android:textColor="@color/graytext"/>
+            android:src="@mipmap/ic_teacher"
+            android:paddingLeft="10dp"/>
 
         <TextView
             android:id="@+id/item_over_jsxm"
@@ -35,6 +43,7 @@
             android:textStyle="bold"
             android:text=""
             android:textSize="20sp"
+            android:paddingLeft="5dp"
             />
     </RelativeLayout>
 
@@ -63,11 +72,12 @@
             <TextView
                 android:id="@+id/item_over_xsxm"
                 android:layout_toRightOf="@+id/item_over_xs"
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:text=""
+                android:layout_alignBaseline="@+id/item_over_xs"
+
                 />
 
             <TextView
@@ -83,11 +93,12 @@
                 android:id="@+id/item_over_kcxm"
                 android:layout_toRightOf="@+id/item_over_kc"
                 android:layout_below="@+id/item_over_xsxm"
-                android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="sdfaaaaaaaaaaa"
+                android:text=""
+                android:layout_alignBaseline="@+id/item_over_kc"
+
                 />
 
         <!--开始时间-->
@@ -105,7 +116,7 @@
                 android:id="@+id/item_over_kssjd"
                 android:layout_below="@+id/item_over_kcxm"
                 android:layout_toRightOf="@+id/item_over_kssj"
-
+                android:layout_alignBaseline="@+id/item_over_kssj"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
@@ -120,32 +131,54 @@
                 android:layout_height="wrap_content"
                 android:text="@string/item_jssj"
                 android:textSize="15sp"
-                android:layout_marginBottom="5dp"
+
 
                 />
             <TextView
                 android:id="@+id/item_over_jssjd"
                 android:layout_below="@+id/item_over_kssjd"
                 android:layout_toRightOf="@+id/item_over_jssj"
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:text=""
+                android:layout_alignBaseline="@+id/item_over_jssj"
                 />
 
+            <!--完成时间-->
+            <TextView
+                android:id="@+id/item_over_wcsj"
+                android:layout_below="@+id/item_over_jssj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/item_wcsj"
+                android:textSize="15sp"
+                android:layout_marginBottom="5dp"
 
+                />
+            <TextView
+                android:id="@+id/item_over_wcsjd"
+                android:layout_below="@+id/item_over_jssjd"
+                android:layout_toRightOf="@+id/item_over_wcsj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text=""
+                android:layout_alignBaseline="@+id/item_over_wcsj"
+                />
 
             <ImageView
                 android:id="@+id/have_class"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:layout_alignParentRight="true"
                 android:src="@mipmap/ic_classover"
 
                 android:drawablePadding="-10dp"
                 android:layout_marginRight="10dp"
-                android:layout_alignBottom="@+id/item_over_jssjd" />
+                android:layout_alignBottom="@+id/item_over_wcsjd"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="22dp"
+                android:layout_alignTop="@+id/item_over_kcxm" />
 
 
         </RelativeLayout>

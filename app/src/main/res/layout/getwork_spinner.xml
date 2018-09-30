@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+
+    android:background="@mipmap/bg_spinneritem"
+
+    >
+    <!--<ImageView-->
+        <!--android:id="@+id/classover_spinkc_ic"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:src="@mipmap/ic_spinnerkc"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:paddingLeft="60dp"-->
+        <!--/>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/spinner_text"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+
+        <!--android:textSize="18sp"-->
+        <!--android:paddingLeft="5dp"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_toRightOf="@+id/classover_spinkc_ic"-->
+        <!--/>-->
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/classover_spinnerkc"
+
+        android:spinnerMode="dialog"
+        android:paddingLeft="2dp"
+
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true">
+    </Spinner>
+
+    <ImageView
+        android:id="@+id/classover_spinrq_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/ic_spinnerrq"
+        android:layout_toRightOf="@+id/classover_spinnerkc"
+        android:paddingLeft="20dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/classover_spinrq"
+        android:text="选择日期"
+        android:textSize="18sp"
+        android:layout_toRightOf="@+id/classover_spinrq_ic"
+        android:layout_centerVertical="true"
+        android:paddingLeft="5dp"
+        />
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="12dp"
+        android:id="@+id/classover_spinnerrq"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/classover_spinrq"
+        android:paddingRight="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/ic_time"
+        android:paddingLeft="5dp"
+        >
+    </ImageView>
+
+
+
+
+
+</RelativeLayout>

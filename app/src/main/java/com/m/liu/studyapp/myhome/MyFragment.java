@@ -73,7 +73,7 @@ public class MyFragment extends Fragment implements View.OnClickListener{
 
         AlertDialog.Builder builder = new Builder(getActivity());
         builder.setTitle("确定要退出吗？");     //设置对话框标题
-        builder.setIcon(android.R.drawable.btn_star_big_on);      //设置对话框标题前的图标
+//        builder.setIcon(android.R.drawable.btn_star_big_on);      //设置对话框标题前的图标
         builder.setPositiveButton("确认", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

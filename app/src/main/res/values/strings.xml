@@ -8,7 +8,14 @@
     <string name="item_sc">时长：</string>
     <string name="item_kssj">课程开始时间：</string>
     <string name="item_jssj">课程结束时间：</string>
+    <string name="item_wcsj">完成时间：</string>
     <string name="edit_fk">请输入反馈内容</string>
     <string name="edit_fk_null">请输入内容</string>
+
+    <string-array name = "phones_array">
+        <item>iPhone</item>
+        <item>Android</item>
+        <item>BlackBerry</item>
+    </string-array>
 
 </resources>

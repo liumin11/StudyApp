@@ -11,16 +11,37 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    signingConfigs {
+        release {
+            storeFile file("studyapp.jks")
+            storePassword "123456"
+            keyAlias "studyapp"
+            keyPassword "123456"
+        }
+    }
+
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
         }
         sit {
             debuggable true
             minifyEnabled false
         }
     }
+    productFlavors {
+        xiaomi {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "xiaomi"]
+        }
+        baidu {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "baidu"]
+        }
+    }
+
 }
 
 dependencies {
@@ -35,4 +56,6 @@ dependencies {
     compile 'com.google.code.gson:gson:2.7'
     compile 'com.ashokvarma.android:bottom-navigation-bar:2.0.3'
     testCompile 'junit:junit:4.12'
+    compile 'com.youth.banner:banner:1.4.9'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
 }
